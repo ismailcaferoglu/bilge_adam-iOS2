@@ -63,7 +63,7 @@ class BilgeAdamTextField: UITextField {
         self.attributedPlaceholder = attString
         
     }
-    
+     
     //MARK: -- SideView'ın hangi konuma yerleşeceğine karar verir.
     func defineSideViewLocation(){
         

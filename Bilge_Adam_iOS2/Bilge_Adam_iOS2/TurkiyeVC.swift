@@ -28,7 +28,7 @@ class TurkiyeVC: UIViewController,DataTransferDelegate {
         self.view.backgroundColor = .red
     
         let vc = LozanVC()
-        vc.ismetPasha = self
+        //vc.ismetPasha = self
         vc.fromTurkiye = "HomeVC'den geliyorum"
 
         self.navigationController?.pushViewController(vc, animated: true)

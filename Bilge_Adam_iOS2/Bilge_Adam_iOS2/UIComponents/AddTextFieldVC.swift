@@ -13,12 +13,20 @@ class AddTextFieldVC: UIViewController {
     private lazy var txtUsername:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
         tf.placeholder = "Kullanıcı adınızı giriniz"
+        tf.delegate = self
+        tf.keyboardType = .emailAddress
+        tf.isSecureTextEntry = true
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .none
         return tf
     }()
     
     private lazy var txtPassword:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
         tf.placeholder = "Soyad giriniz"
+        tf.isSecureTextEntry = true
+        tf.keyboardType = .numberPad
+        tf.delegate = self
         return tf
     }()
     
@@ -42,6 +50,8 @@ class AddTextFieldVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let text = txtUsername.text
+        print(text)
         setupViews()
     }
     
@@ -71,7 +81,37 @@ class AddTextFieldVC: UIViewController {
 
 }
 
-
+extension AddTextFieldVC:UITextFieldDelegate{
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        print(textField.text)
+        print(textField.text?.count)
+        
+        if textField == txtUsername && textField.text?.count == 30 {
+            return false
+        }else if textField == txtPassword && textField.text?.count == 10{
+            return false
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+        return true
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.backgroundColor = .green
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.backgroundColor = .red
+    }
+}
 
 
 
