@@ -280,14 +280,6 @@ extension UIViewController {
             Preview(viewController: self)
         }
     
-    func setCustomLargeTitle(_ title:String){
-        guard let nav = self.navigationController else { return }
-        nav.navigationBar.prefersLargeTitles = true
-        self.title = title
-        nav.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:AppDefaults.Colors.primaryText,
-                                                                             NSAttributedString.Key.font:AppDefaults.Fonts.bold24]
-    }
-    
     func addChild(this child: UIViewController, contentView:UIView ) {
         addChild(child)
         contentView.addSubview(child.view)
@@ -463,19 +455,6 @@ extension Array {
        
        return self[index]
    }
-}
-
-// MARK: - UINavigationBar
-extension UINavigationBar {
-
-    func setCustomTitle(title:String?) {
-        guard let topItem = self.topItem else { return }
-        
-        topItem.title = title
-        titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppDefaults.Colors.primaryText,
-                               NSAttributedString.Key.font: AppDefaults.Fonts.bold24]
-    
-    }
 }
 
 extension UIImageView{

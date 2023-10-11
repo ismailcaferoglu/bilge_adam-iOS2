@@ -121,12 +121,12 @@ class AddLabelVC: UIViewController {
     
     private func setupLayout(){
         
-        //Native
+        //MARK: -- Native
 //        lblWellcomeText.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 24).isActive = true
 //        lblWellcomeText.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -24).isActive = true
 //        lblWellcomeText.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 24).isActive = true
         
-        //TinyConstraints
+        //MARK: -- TinyConstraints
         lblWellcomeText.centerXToSuperview()
         lblWellcomeText.topToSuperview(offset:24,usingSafeArea: true)
         
@@ -150,7 +150,7 @@ class AddLabelVC: UIViewController {
 //        lblSurname.trailingToSuperview(offset:24)
 //        lblSurname.top(to: lblName)
        
-        //Snapkit
+        //MARK: -- SnapKit
 //        lblWellcomeText.snp.makeConstraints({ label in
 //            label.leading.equalToSuperview().offset(24)
 //            label.trailing.equalToSuperview().offset(24)
