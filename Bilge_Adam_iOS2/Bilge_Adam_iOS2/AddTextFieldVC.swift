@@ -27,6 +27,7 @@ class AddTextFieldVC: UIViewController {
         tf.placeholder = "Şifre giriniz."
        
         tf.sideView = .left(image: UIImage(systemName: "key.horizontal"))
+    
         return tf
     }()
     
