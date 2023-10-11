@@ -10,33 +10,23 @@ import SnapKit
 
 class AddTextFieldVC: UIViewController {
     
-    private lazy var txtUsername:UITextField = {
-        let tf = UITextField()
+    private lazy var txtUsername:BilgeAdamTextField = {
+        let tf = BilgeAdamTextField()
         tf.placeholder = "Kullanıcı adınızı giriniz"
-        tf.font = UIFont(name: "Avenir-Medium", size: 14)
-        tf.layer.borderWidth = 2
-        tf.layer.borderColor = UIColor.black.cgColor
-        tf.layer.cornerRadius = 16
         return tf
     }()
     
-    private lazy var txtPassword:UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Kullanıcı adınızı giriniz"
-        tf.font = UIFont(name: "Avenir-Medium", size: 14)
-        tf.layer.borderWidth = 2
-        tf.layer.borderColor = UIColor.black.cgColor
-        tf.layer.cornerRadius = 16
+    private lazy var txtPassword:BilgeAdamTextField = {
+        let tf = BilgeAdamTextField()
+        tf.placeholder = "Soyad giriniz"
         return tf
     }()
     
-    private lazy var txtPasswordConfirm:UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Kullanıcı adınızı giriniz"
-        tf.font = UIFont(name: "Avenir-Medium", size: 14)
-        tf.layer.borderWidth = 2
-        tf.layer.borderColor = UIColor.black.cgColor
-        tf.layer.cornerRadius = 16
+    private lazy var txtPasswordConfirm:BilgeAdamTextField = {
+        let tf = BilgeAdamTextField()
+        tf.placeholder = "Şifre giriniz."
+       
+        tf.sideView = .left(image: UIImage(systemName: "key.horizontal"))
         return tf
     }()
     
@@ -88,10 +78,10 @@ class AddTextFieldVC: UIViewController {
 import SwiftUI
 
 @available(iOS 13, *)
-struct HomeVC_Preview: PreviewProvider {
+struct AddTextfieldVC_Preview: PreviewProvider {
     static var previews: some View{
          
-        HomeVC().showPreview()
+        AddTextFieldVC().showPreview()
     }
 }
 #endif
