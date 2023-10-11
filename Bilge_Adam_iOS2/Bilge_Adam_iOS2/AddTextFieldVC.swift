@@ -81,16 +81,17 @@ class AddTextFieldVC: UIViewController {
 }
 
 
-extension UIView {
-    
-    func addSubviews(_ views:UIView...) {
-        views.forEach({ self.addSubview($0)})
-    }
-}
 
-extension UIStackView {
-    
-    func addArrangedSubviews(_ views:UIView...) {
-        views.forEach({ self.addArrangedSubview($0)})
+
+
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct HomeVC_Preview: PreviewProvider {
+    static var previews: some View{
+         
+        HomeVC().showPreview()
     }
 }
+#endif
