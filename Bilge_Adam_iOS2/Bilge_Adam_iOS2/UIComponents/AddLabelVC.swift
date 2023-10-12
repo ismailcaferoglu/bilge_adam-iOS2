@@ -71,6 +71,13 @@ class AddLabelVC: UIViewController {
         sv.spacing = 8
         return sv
     }()
+    
+    private lazy var dismissButton:UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "figure.kickboxing"), for: .normal)
+        button.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
+        return button
+    }()
 
     
     //MARK: -- Life Cycles
@@ -109,6 +116,7 @@ class AddLabelVC: UIViewController {
         
         self.view.addSubview(lblWellcomeText)
         self.view.addSubview(lblDescriptionText)
+        self.view.addSubview(dismissButton)
         self.view.addSubview(stackView)
         
         stackView.addArrangedSubview(lblName)
@@ -117,6 +125,13 @@ class AddLabelVC: UIViewController {
        
         
         setupLayout()
+    }
+    
+    @objc func dismissButtonTapped(){
+         
+        self.dismiss(animated: true, completion: {
+            print("Bu sayfa kapatıldı.")
+        })
     }
     
     private func setupLayout(){
@@ -156,6 +171,10 @@ class AddLabelVC: UIViewController {
 //            label.trailing.equalToSuperview().offset(24)
 //            label.top.equalTo(self.view.safeAreaLayoutGuide).offset(24)
 //        })
+        
+        dismissButton.centerInSuperview()
+        dismissButton.width(200)
+        dismissButton.height(50)
         
     }
     

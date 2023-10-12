@@ -34,9 +34,8 @@ class AddButtonVC: UIViewController {
     
     @objc func btnHelloTapped(){
         
-        for _ in 0..<5 {
-            print("Hello World.")
-        }
+        let vc = AddTextFieldVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

@@ -55,8 +55,31 @@ class AddTextFieldVC: UIViewController {
         setupViews()
     }
     
+    @objc func backButtonTapped(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func rightButtonTapped(){
+        let vc = AddLabelVC()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
 
     private func setupViews(){
+        
+        let leftButtonImage = UIImage(systemName: "arrow.backward")
+        let leftBarButton = UIBarButtonItem(image: leftButtonImage, style: .plain, target: self, action: #selector(backButtonTapped))
+        leftBarButton.tintColor = .black
+        
+        let rightButtonImage = UIImage(systemName: "plus.app")
+        
+        let rightBarButton = UIBarButtonItem(image: rightButtonImage, style: .plain, target: self, action: #selector(rightButtonTapped))
+       
+        
+        self.navigationItem.leftBarButtonItem = leftBarButton
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
         self.view.backgroundColor = .white
         self.view.addSubviews(stackView)
         
