@@ -55,14 +55,18 @@ class AddTextFieldVC: UIViewController {
         setupViews()
     }
     
+    
+    
     @objc func backButtonTapped(){
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func rightButtonTapped(){
         let vc = AddLabelVC()
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .popover
+        
         self.present(vc, animated: true)
+        
     }
     
 

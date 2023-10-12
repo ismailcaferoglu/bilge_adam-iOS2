@@ -21,6 +21,8 @@
 		D9C9C84B2AD6736800D5F81A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C84A2AD6736800D5F81A /* Extensions.swift */; };
 		D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C84C2AD6790D00D5F81A /* BilgeAdamTextField.swift */; };
 		D9C9C84F2AD6B62E00D5F81A /* AddButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C84E2AD6B62E00D5F81A /* AddButtonVC.swift */; };
+		D9C9C8522AD8036B00D5F81A /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8512AD8036B00D5F81A /* AlertVC.swift */; };
+		D9C9C8542AD81D1E00D5F81A /* ConstraintsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8532AD81D1E00D5F81A /* ConstraintsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		D9C9C84A2AD6736800D5F81A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D9C9C84C2AD6790D00D5F81A /* BilgeAdamTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilgeAdamTextField.swift; sourceTree = "<group>"; };
 		D9C9C84E2AD6B62E00D5F81A /* AddButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonVC.swift; sourceTree = "<group>"; };
+		D9C9C8512AD8036B00D5F81A /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
+		D9C9C8532AD81D1E00D5F81A /* ConstraintsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				D9C9C84E2AD6B62E00D5F81A /* AddButtonVC.swift */,
 				D9C9C8482AD430DE00D5F81A /* AddTextFieldVC.swift */,
 				D941438A2ACC09D600AED53A /* AddLabelVC.swift */,
+				D9C9C8512AD8036B00D5F81A /* AlertVC.swift */,
+				D9C9C8532AD81D1E00D5F81A /* ConstraintsVC.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 				D9C9C8492AD430DE00D5F81A /* AddTextFieldVC.swift in Sources */,
 				D941438D2ACC0A0C00AED53A /* LozanVC.swift in Sources */,
 				D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */,
+				D9C9C8522AD8036B00D5F81A /* AlertVC.swift in Sources */,
 				D941437B2ACBE7D500AED53A /* TurkiyeVC.swift in Sources */,
 				D9C9C84F2AD6B62E00D5F81A /* AddButtonVC.swift in Sources */,
 				D941438B2ACC09D600AED53A /* AddLabelVC.swift in Sources */,
+				D9C9C8542AD81D1E00D5F81A /* ConstraintsVC.swift in Sources */,
 				D94143772ACBE7D500AED53A /* AppDelegate.swift in Sources */,
 				D94143792ACBE7D500AED53A /* SceneDelegate.swift in Sources */,
 				D9C9C84B2AD6736800D5F81A /* Extensions.swift in Sources */,

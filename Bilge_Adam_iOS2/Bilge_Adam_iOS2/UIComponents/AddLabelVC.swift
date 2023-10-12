@@ -15,7 +15,7 @@ class AddLabelVC: UIViewController {
     private lazy var lblWellcomeText:UILabel = {
         let label = UILabel()
         label.text = "Hoşgeldiniz.Hoşgeldiniz."
-        label.textColor = .blue
+        label.textColor = UIColor(named: "textColor")
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont(name: "Avenir-Medium", size: 24)
@@ -26,7 +26,7 @@ class AddLabelVC: UIViewController {
     private lazy var lblDescriptionText:UILabel = {
         let label = UILabel()
         label.text = "Bilge Adam uygulamasına hoşgeldiniz"
-        label.textColor = .white
+        label.textColor = UIColor(named: "textColor")
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping
         label.minimumScaleFactor = 12
@@ -112,7 +112,7 @@ class AddLabelVC: UIViewController {
     //MARK: -- View Methods
     private func setupViews(){
         
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = UIColor(named: "backgroundColor")
         
         self.view.addSubview(lblWellcomeText)
         self.view.addSubview(lblDescriptionText)
@@ -156,6 +156,7 @@ class AddLabelVC: UIViewController {
         
         stackView.horizontalToSuperview(insets: .left(16) + .right(16))
         stackView.topToBottom(of: lblDescriptionText,offset: 24)
+    
         
 //        lblName.leadingToSuperview(offset:8)
 //        lblName.width(150)
@@ -181,3 +182,15 @@ class AddLabelVC: UIViewController {
  
 
 }
+
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct AddLabelVC_Preview: PreviewProvider {
+    static var previews: some View{
+         
+        AddLabelVC().showPreview()
+    }
+}
+#endif

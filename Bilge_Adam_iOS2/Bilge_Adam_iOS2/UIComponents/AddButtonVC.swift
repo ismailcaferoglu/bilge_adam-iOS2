@@ -18,7 +18,7 @@ class AddButtonVC: UIViewController {
        
         //MARK: -- Add Button action
         b.addTarget(self, action: #selector(btnHelloTapped), for: .touchUpInside)
-        
+        b.contentHorizontalAlignment = .left
         b.layer.cornerRadius = 8
         b.centerTextAndImage(spacing: 8)
         b.setImage(UIImage(systemName: "key.fill"), for: .normal)
@@ -40,6 +40,7 @@ class AddButtonVC: UIViewController {
     
     
     func setupViews(){
+        self.view.backgroundColor = UIColor(named: "backgroundColor")
         self.view.addSubviews(btnHello)
         setupLayout()
     }
