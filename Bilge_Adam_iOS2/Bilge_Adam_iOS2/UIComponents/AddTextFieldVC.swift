@@ -18,13 +18,14 @@ struct UserInfo {
 class AddTextFieldVC: UIViewController {
     
     weak var delegate:DataTransferDelegate?
+    var message:String! = "Ali"
     
     private lazy var txtUsername:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
         tf.placeholder = "Kullanıcı adınızı giriniz"
         tf.delegate = self
         tf.keyboardType = .emailAddress
-        tf.isSecureTextEntry = true
+        tf.fontStyle = .avenirMedium(size: 40)
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
         return tf
@@ -33,7 +34,7 @@ class AddTextFieldVC: UIViewController {
     private lazy var txtPassword:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
         tf.placeholder = "Soyad giriniz"
-        tf.isSecureTextEntry = true
+        
         tf.keyboardType = .numberPad
         tf.delegate = self
         return tf
@@ -72,6 +73,8 @@ class AddTextFieldVC: UIViewController {
         user.name = txtUsername.text
         user.password = txtPassword.text
         delegate?.getDataFromSignUp(params: user)
+        
+
         self.navigationController?.popViewController(animated: true)
     }
     

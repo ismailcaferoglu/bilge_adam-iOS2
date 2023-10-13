@@ -8,7 +8,7 @@
 import UIKit
 import TinyConstraints
 
-class AddButtonVC: UIViewController {
+class AddButtonVC: UIViewController,DataTransferDelegate {
     
     var userData:UserInfo?
     
@@ -17,7 +17,7 @@ class AddButtonVC: UIViewController {
         tf.placeholder = "Kullanıcı adınızı giriniz"
        
         tf.keyboardType = .emailAddress
-        tf.isSecureTextEntry = true
+         
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
         return tf
@@ -26,7 +26,7 @@ class AddButtonVC: UIViewController {
     private lazy var txtPassword:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
         tf.placeholder = "Şifre giriniz"
-        tf.isSecureTextEntry = true
+        
         tf.keyboardType = .numberPad
        
         return tf
@@ -40,7 +40,7 @@ class AddButtonVC: UIViewController {
        
         //MARK: -- Add Button action
         b.addTarget(self, action: #selector(btnHelloTapped), for: .touchUpInside)
-        b.contentHorizontalAlignment = .left
+        b.contentHorizontalAlignment = .center
         b.layer.cornerRadius = 8
         b.centerTextAndImage(spacing: 8)
         b.setImage(UIImage(systemName: "key.fill"), for: .normal)
@@ -60,10 +60,19 @@ class AddButtonVC: UIViewController {
         super.viewDidLoad()
         setupViews()
         
-        let vc = AddTextFieldVC()
-        vc.delegate = self
+        let vc = AddTextFieldVC() //1
+        //vc.delegate = self
+        vc.message = "Ahmet"
+        let vc1 = AddTextFieldVC()
+        vc1.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
         
+    }
+    
+    //MARK: -- Protocol Method
+    func getDataFromSignUp(params: UserInfo) {
+        txtUsername.text = params.name
+        txtPassword.text = params.password
     }
     
     @objc func btnHelloTapped(){
@@ -77,6 +86,10 @@ class AddButtonVC: UIViewController {
         stackView.addArrangedSubviews(txtUsername,txtPassword)
         self.view.addSubviews(stackView, btnHello)
         setupLayout()
+    }
+    
+    func sumNumbers(number:Int){
+        let sumNum = number * number
     }
  
 
@@ -96,12 +109,6 @@ class AddButtonVC: UIViewController {
     }
 }
 
-extension AddButtonVC:DataTransferDelegate {
-    
-    func getDataFromSignUp(params: UserInfo) {
-        self.userData = params
-    }
-}
 
 
 #if DEBUG
