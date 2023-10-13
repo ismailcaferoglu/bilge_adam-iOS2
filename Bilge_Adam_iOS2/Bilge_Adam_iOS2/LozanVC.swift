@@ -30,9 +30,8 @@ class LozanVC: UIViewController {
     
     @objc func btnTapped(){
         
-        ismetPasha?.getData(data: fromTurkiye)
-        ismetPasha?.hatay(isConfirm: false)
-        ismetPasha?.azinliklar(isConfirm: true)
+        ismetPasha?.getData(data: "Churchill baya konuştu")
+       
         self.navigationController?.popViewController(animated: true)
     }
     

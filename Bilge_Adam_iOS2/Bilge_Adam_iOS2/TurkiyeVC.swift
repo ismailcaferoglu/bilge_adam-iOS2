@@ -9,13 +9,13 @@ import UIKit
 
 protocol DataTransferDelegate:AnyObject {
     func getData(data:String)
-    func hatay(isConfirm:Bool)
-    func azinliklar(isConfirm:Bool)
+    func getDataFromSignUp(params:UserInfo)
     
 }
 
 extension DataTransferDelegate {
     func getData(data:String){ }
+    func getDataFromSignUp(params:UserInfo){ }
 }
 
 class TurkiyeVC: UIViewController,DataTransferDelegate {
@@ -28,25 +28,16 @@ class TurkiyeVC: UIViewController,DataTransferDelegate {
         self.view.backgroundColor = .red
     
         let vc = LozanVC()
-        //vc.ismetPasha = self
-        vc.fromTurkiye = "HomeVC'den geliyorum"
+        vc.ismetPasha = self
+        //vc.fromTurkiye = "HomeVC'den geliyorum"
 
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func getData(data: String) {
-        self.lozanMetni = data
-        print("DetailVC'den gelen data: \(data)")
+        print(data)
     }
-    
-    func hatay(isConfirm: Bool) {
-        print(isConfirm)
-    }
-    
-    func azinliklar(isConfirm: Bool) {
-        print(isConfirm)
-    }
-     
+  
 
 }
 

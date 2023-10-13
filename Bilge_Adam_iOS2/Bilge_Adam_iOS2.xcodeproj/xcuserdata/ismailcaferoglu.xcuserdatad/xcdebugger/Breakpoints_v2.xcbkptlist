@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF4286A3-69F0-4A32-A1D6-F9987AD633E6"
+            uuid = "CDAD2462-AA34-4A8A-97E0-5D2C4DA9D699"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_iOS2/TurkiyeVC.swift"
+            filePath = "Bilge_Adam_iOS2/UIComponents/AddButtonVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getData(data:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "getDataFromSignUp(params:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

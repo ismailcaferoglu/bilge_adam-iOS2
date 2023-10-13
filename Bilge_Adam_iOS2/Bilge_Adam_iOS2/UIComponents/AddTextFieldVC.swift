@@ -7,8 +7,17 @@
 
 import UIKit
 import SnapKit
+import TinyConstraints
+
+struct UserInfo {
+    var name:String?
+    var userName:String?
+    var password:String?
+}
 
 class AddTextFieldVC: UIViewController {
+    
+    weak var delegate:DataTransferDelegate?
     
     private lazy var txtUsername:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
@@ -47,6 +56,7 @@ class AddTextFieldVC: UIViewController {
         return sv
     }()
 
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,9 +65,13 @@ class AddTextFieldVC: UIViewController {
         setupViews()
     }
     
-    
+
     
     @objc func backButtonTapped(){
+        var user = UserInfo()
+        user.name = txtUsername.text
+        user.password = txtPassword.text
+        delegate?.getDataFromSignUp(params: user)
         self.navigationController?.popViewController(animated: true)
     }
     

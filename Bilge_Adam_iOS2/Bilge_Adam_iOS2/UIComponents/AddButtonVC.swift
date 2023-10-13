@@ -10,6 +10,28 @@ import TinyConstraints
 
 class AddButtonVC: UIViewController {
     
+    var userData:UserInfo?
+    
+    private lazy var txtUsername:BilgeAdamTextField = {
+        let tf = BilgeAdamTextField()
+        tf.placeholder = "Kullanıcı adınızı giriniz"
+       
+        tf.keyboardType = .emailAddress
+        tf.isSecureTextEntry = true
+        tf.autocorrectionType = .no
+        tf.autocapitalizationType = .none
+        return tf
+    }()
+    
+    private lazy var txtPassword:BilgeAdamTextField = {
+        let tf = BilgeAdamTextField()
+        tf.placeholder = "Şifre giriniz"
+        tf.isSecureTextEntry = true
+        tf.keyboardType = .numberPad
+       
+        return tf
+    }()
+    
     private lazy var btnHello:UIButton = {
         let b = UIButton()
         b.setTitle("Say Hello", for: .normal)
@@ -25,31 +47,59 @@ class AddButtonVC: UIViewController {
         b.tintColor = .white
         return b
     }()
+    
+    private lazy var stackView:UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.spacing = 10
+        sv.distribution = .fillEqually
+        return sv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         
+        let vc = AddTextFieldVC()
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @objc func btnHelloTapped(){
         
-        let vc = AddTextFieldVC()
-        self.navigationController?.pushViewController(vc, animated: true)
+        print(self.userData?.name)
     }
     
     
     func setupViews(){
         self.view.backgroundColor = UIColor(named: "backgroundColor")
-        self.view.addSubviews(btnHello)
+        stackView.addArrangedSubviews(txtUsername,txtPassword)
+        self.view.addSubviews(stackView, btnHello)
         setupLayout()
     }
  
 
     private func setupLayout(){
+        
+        txtUsername.snp.makeConstraints({ $0.height.equalTo(50) })
+        
+        stackView.snp.makeConstraints({ stack in
+            stack.leading.equalToSuperview().offset(24)
+            stack.trailing.equalToSuperview().offset(-24)
+            stack.top.equalTo(self.view.safeAreaLayoutGuide).offset(24)
+        })
+        
         btnHello.horizontalToSuperview(insets:.left(24) + .right(24))
         btnHello.height(52)
         btnHello.bottomToSuperview(offset:-24,usingSafeArea: true)
+    }
+}
+
+extension AddButtonVC:DataTransferDelegate {
+    
+    func getDataFromSignUp(params: UserInfo) {
+        self.userData = params
     }
 }
 
