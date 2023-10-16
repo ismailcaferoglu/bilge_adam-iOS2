@@ -60,13 +60,13 @@ class AddButtonVC: UIViewController,DataTransferDelegate {
         super.viewDidLoad()
         setupViews()
         
-        let vc = AddTextFieldVC() //1
-        //vc.delegate = self
-        vc.message = "Ahmet"
-        let vc1 = AddTextFieldVC()
-        vc1.delegate = self
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+//        let vc = AddTextFieldVC() //1
+//        //vc.delegate = self
+//        vc.message = "Ahmet"
+//        let vc1 = AddTextFieldVC()
+//        vc1.delegate = self
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        
     }
     
     //MARK: -- Protocol Method
@@ -76,8 +76,8 @@ class AddButtonVC: UIViewController,DataTransferDelegate {
     }
     
     @objc func btnHelloTapped(){
-        
-        print(self.userData?.name)
+        let vc = AddPickerVC()
+      self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

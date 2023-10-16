@@ -24,6 +24,14 @@ class AddPickerVC: UIViewController {
     
     
     
+    private lazy var toggleSwitch:UISwitch = {
+        let s = UISwitch()
+        s.onTintColor = .red
+        s.thumbTintColor = .systemBlue
+        s.addTarget(self, action: #selector(toggleSwitchChanged), for: .valueChanged)
+        return s
+    }()
+    
     private lazy var txtPicker :UITextField = {
         let tf = UITextField()
         tf.placeholder = "Şehir seçiniz"
@@ -52,8 +60,18 @@ class AddPickerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        toggleSwitch.setOn(true, animated: true)
         setupViews()
+    }
+    
+    @objc func toggleSwitchChanged(sender:UISwitch){
+        print(sender.isOn)
+        
+        if sender.isOn {
+            self.view.backgroundColor = .black
+        }else {
+            self.view.backgroundColor = .white
+        }
     }
     
     
@@ -100,7 +118,7 @@ class AddPickerVC: UIViewController {
     
     private func setupViews(){
         self.view.backgroundColor = .white
-        self.view.addSubviews(txtPicker,txtState)
+        self.view.addSubviews(txtPicker,txtState,toggleSwitch)
         setupLayout()
     }
     
@@ -112,6 +130,9 @@ class AddPickerVC: UIViewController {
         txtState.topToBottom(of: txtPicker,offset: 12)
         txtState.horizontalToSuperview(insets: .left(16) + .right(16))
         txtState.height(52)
+        
+        toggleSwitch.topToBottom(of: txtState, offset: 24)
+        toggleSwitch.leading(to: txtState)
     }
 }
 

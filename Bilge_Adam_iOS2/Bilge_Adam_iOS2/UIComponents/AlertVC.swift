@@ -64,7 +64,7 @@ class AlertVC: UIViewController {
     
     private func setupViews(){
         
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = .white
         self.view.addSubviews(btnShowAlert)
         setupLayout()
     }
