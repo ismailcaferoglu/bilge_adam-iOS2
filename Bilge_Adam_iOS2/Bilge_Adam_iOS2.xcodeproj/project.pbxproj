@@ -26,6 +26,8 @@
 		D9C9C8582ADD0DE400D5F81A /* AddPicker_SwitchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8572ADD0DE400D5F81A /* AddPicker_SwitchVC.swift */; };
 		D9C9C85A2ADD4C8F00D5F81A /* AddSegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8592ADD4C8F00D5F81A /* AddSegmentedVC.swift */; };
 		D9C9C85C2ADD5D1A00D5F81A /* MainTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C85B2ADD5D1A00D5F81A /* MainTabbarVC.swift */; };
+		D9C9C85E2ADE609000D5F81A /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */; };
+		D9C9C8642ADE6EA400D5F81A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8632ADE6EA400D5F81A /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		D9C9C8572ADD0DE400D5F81A /* AddPicker_SwitchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPicker_SwitchVC.swift; sourceTree = "<group>"; };
 		D9C9C8592ADD4C8F00D5F81A /* AddSegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSegmentedVC.swift; sourceTree = "<group>"; };
 		D9C9C85B2ADD5D1A00D5F81A /* MainTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarVC.swift; sourceTree = "<group>"; };
+		D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
+		D9C9C8632ADE6EA400D5F81A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,9 @@
 			children = (
 				D94143762ACBE7D500AED53A /* AppDelegate.swift */,
 				D94143782ACBE7D500AED53A /* SceneDelegate.swift */,
-				D9C9C84A2AD6736800D5F81A /* Extensions.swift */,
-				D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */,
-				D941438C2ACC0A0C00AED53A /* LozanVC.swift */,
-				D9C9C8502AD6B63400D5F81A /* UIComponents */,
+				D9C9C8602ADE6D6E00D5F81A /* Utils */,
+				D9C9C8612ADE6DFA00D5F81A /* Screens */,
+				D9C9C8502AD6B63400D5F81A /* CustomComponents */,
 				D941437F2ACBE7D600AED53A /* Assets.xcassets */,
 				D94143812ACBE7D600AED53A /* LaunchScreen.storyboard */,
 				D94143842ACBE7D600AED53A /* Info.plist */,
@@ -95,10 +98,28 @@
 			path = Bilge_Adam_iOS2;
 			sourceTree = "<group>";
 		};
-		D9C9C8502AD6B63400D5F81A /* UIComponents */ = {
+		D9C9C8502AD6B63400D5F81A /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
 				D9C9C84C2AD6790D00D5F81A /* BilgeAdamTextField.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		D9C9C8602ADE6D6E00D5F81A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9C9C84A2AD6736800D5F81A /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9C9C8612ADE6DFA00D5F81A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D9C9C8622ADE6E4B00D5F81A /* TableViewVC */,
+				D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */,
+				D941438C2ACC0A0C00AED53A /* LozanVC.swift */,
 				D9C9C8592ADD4C8F00D5F81A /* AddSegmentedVC.swift */,
 				D9C9C84E2AD6B62E00D5F81A /* AddButtonVC.swift */,
 				D9C9C8482AD430DE00D5F81A /* AddTextFieldVC.swift */,
@@ -108,7 +129,16 @@
 				D9C9C8572ADD0DE400D5F81A /* AddPicker_SwitchVC.swift */,
 				D9C9C85B2ADD5D1A00D5F81A /* MainTabbarVC.swift */,
 			);
-			path = UIComponents;
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D9C9C8622ADE6E4B00D5F81A /* TableViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */,
+				D9C9C8632ADE6EA400D5F81A /* CustomCell.swift */,
+			);
+			path = TableViewVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +226,8 @@
 				D941438D2ACC0A0C00AED53A /* LozanVC.swift in Sources */,
 				D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */,
 				D9C9C8522AD8036B00D5F81A /* AlertVC.swift in Sources */,
+				D9C9C8642ADE6EA400D5F81A /* CustomCell.swift in Sources */,
+				D9C9C85E2ADE609000D5F81A /* TableViewVC.swift in Sources */,
 				D941437B2ACBE7D500AED53A /* TurkiyeVC.swift in Sources */,
 				D9C9C84F2AD6B62E00D5F81A /* AddButtonVC.swift in Sources */,
 				D941438B2ACC09D600AED53A /* AddLabelVC.swift in Sources */,
