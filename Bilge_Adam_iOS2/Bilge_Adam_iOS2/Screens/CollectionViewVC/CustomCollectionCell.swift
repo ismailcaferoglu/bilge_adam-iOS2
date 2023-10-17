@@ -1,15 +1,18 @@
 //
-//  CustomCell.swift
+//  CustomCollectionCell.swift
 //  Bilge_Adam_iOS2
 //
 //  Created by İsmail Caferoğlu on 17.10.2023.
 //
 
 import UIKit
-import SnapKit
 
-class CustomCell: UITableViewCell {
+class CustomCollectionCell: UICollectionViewCell {
     
+    
+    weak var delegate:DataTransferDelegate?
+    
+    var closure:()->Void!
     
     private lazy var imgUser:UIImageView = {
         let iv = UIImageView()
@@ -45,24 +48,34 @@ class CustomCell: UITableViewCell {
         return l
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    private lazy var btnSeeAll:UIButton = {
+        let b = UIButton()
+        b.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
+        return b
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupViews()
     }
-
     
-    public func configure(object:User,bool:Bool){
+    
+    @objc func btnTapped(){
+        closure()
+        delegate?.getData(data: "")
+    }
+    
+    public func configure(object:User){
         imgUser.image = object.image
         lblUserName.text = object.name
         lblUserSurname.text = object.surname
         lblBirthday.text = String(object.birthday!)
-        imgUser.isHidden = bool
+        imgUser.isHidden = object.isBool!
         
     }
     
     private func setupViews(){
-        
+        self.contentView.backgroundColor = .systemGray
         self.contentView.addSubviews(imgUser,
                                      lblUserName,
                                      lblUserSurname,
@@ -106,6 +119,3 @@ class CustomCell: UITableViewCell {
     }
     
 }
-
-
-

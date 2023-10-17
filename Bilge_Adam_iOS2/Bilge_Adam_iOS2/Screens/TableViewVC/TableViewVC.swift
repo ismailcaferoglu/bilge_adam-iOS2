@@ -19,6 +19,14 @@ class TableViewVC: UIViewController {
          User(image: UIImage(named: "angry"), name: "John", surname: "Doe", birthday: 1990,isBool: true),
          User(image: UIImage(named: "angry"), name: "Jane", surname: "Smith", birthday: 1985,isBool: false),
          User(image: UIImage(named: "angry"), name: "Alice", surname: "Johnson", birthday: 2000,isBool: true),
+         User(image: UIImage(named: "angry"), name: "Bob", surname: "Williams", birthday: 1992,isBool: true),
+         User(image: UIImage(named: "angry"), name: "John", surname: "Doe", birthday: 1990,isBool: true),
+         User(image: UIImage(named: "angry"), name: "Jane", surname: "Smith", birthday: 1985,isBool: false),
+         User(image: UIImage(named: "angry"), name: "Alice", surname: "Johnson", birthday: 2000,isBool: false),
+         User(image: UIImage(named: "angry"), name: "Bob", surname: "Williams", birthday: 1992,isBool: true),
+         User(image: UIImage(named: "angry"), name: "John", surname: "Doe", birthday: 1990,isBool: true),
+         User(image: UIImage(named: "angry"), name: "Jane", surname: "Smith", birthday: 1985,isBool: false),
+         User(image: UIImage(named: "angry"), name: "Alice", surname: "Johnson", birthday: 2000,isBool: true),
          User(image: UIImage(named: "angry"), name: "Bob", surname: "Williams", birthday: 1992,isBool: true)
      ]
     
@@ -68,6 +76,7 @@ class TableViewVC: UIViewController {
 extension TableViewVC:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
