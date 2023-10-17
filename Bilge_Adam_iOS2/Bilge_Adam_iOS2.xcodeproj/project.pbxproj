@@ -28,6 +28,7 @@
 		D9C9C85C2ADD5D1A00D5F81A /* MainTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C85B2ADD5D1A00D5F81A /* MainTabbarVC.swift */; };
 		D9C9C85E2ADE609000D5F81A /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */; };
 		D9C9C8642ADE6EA400D5F81A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8632ADE6EA400D5F81A /* CustomCell.swift */; };
+		D9C9C8662ADE763B00D5F81A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8652ADE763B00D5F81A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +50,9 @@
 		D9C9C8572ADD0DE400D5F81A /* AddPicker_SwitchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPicker_SwitchVC.swift; sourceTree = "<group>"; };
 		D9C9C8592ADD4C8F00D5F81A /* AddSegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSegmentedVC.swift; sourceTree = "<group>"; };
 		D9C9C85B2ADD5D1A00D5F81A /* MainTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarVC.swift; sourceTree = "<group>"; };
-		D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
+		D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D9C9C8632ADE6EA400D5F81A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		D9C9C8652ADE763B00D5F81A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				D9C9C85D2ADE609000D5F81A /* TableViewVC.swift */,
 				D9C9C8632ADE6EA400D5F81A /* CustomCell.swift */,
+				D9C9C8652ADE763B00D5F81A /* User.swift */,
 			);
 			path = TableViewVC;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */,
 				D9C9C8522AD8036B00D5F81A /* AlertVC.swift in Sources */,
 				D9C9C8642ADE6EA400D5F81A /* CustomCell.swift in Sources */,
+				D9C9C8662ADE763B00D5F81A /* User.swift in Sources */,
 				D9C9C85E2ADE609000D5F81A /* TableViewVC.swift in Sources */,
 				D941437B2ACBE7D500AED53A /* TurkiyeVC.swift in Sources */,
 				D9C9C84F2AD6B62E00D5F81A /* AddButtonVC.swift in Sources */,

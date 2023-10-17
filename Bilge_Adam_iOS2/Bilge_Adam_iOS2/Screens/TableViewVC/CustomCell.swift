@@ -50,10 +50,19 @@ class CustomCell: UITableViewCell {
         
         setupViews()
     }
+
     
-    
-    public func configure(object:String){
-        lblUserName.text = object
+    public func configure(object:User,bool:Bool){
+        //imgUser.image = object.image
+        lblUserName.text = object.name
+        lblUserSurname.text = object.surname
+        lblBirthday.text = String(object.birthday!)
+        
+        if bool {
+            imgUser.image = UIImage(named: "angry")
+        }else {
+            imgUser.image = UIImage(named: "happy")
+        }
     }
     
     private func setupViews(){
@@ -103,9 +112,4 @@ class CustomCell: UITableViewCell {
 }
 
 
-struct User {
-    var image:UIImage?
-    var name:String?
-    var surname:String?
-    var birthday:Int?
-}
+
