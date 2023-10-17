@@ -10,6 +10,19 @@ import TinyConstraints
 
 class TableViewVC: UIViewController {
     
+    var users: [User] = [
+        User(image: UIImage(named: "user1"), name: "John", surname: "Doe", birthday: 1990),
+        User(image: UIImage(named: "user2"), name: "Jane", surname: "Smith", birthday: 1985),
+        User(image: UIImage(named: "user3"), name: "Alice", surname: "Johnson", birthday: 2000),
+        User(image: UIImage(named: "user4"), name: "Bob", surname: "Williams", birthday: 1992),
+        User(image: UIImage(named: "user5"), name: "Ella", surname: "Brown", birthday: 1988),
+        User(image: UIImage(named: "user6"), name: "James", surname: "Lee", birthday: 1995),
+        User(image: UIImage(named: "user7"), name: "Grace", surname: "Davis", birthday: 1998),
+        User(image: UIImage(named: "user8"), name: "Michael", surname: "Miller", birthday: 1980),
+        User(image: UIImage(named: "user9"), name: "Olivia", surname: "Anderson", birthday: 2002),
+        User(image: UIImage(named: "user10"), name: "William", surname: "Wilson", birthday: 1991)
+    ]
+    
     
     private lazy var tableView:UITableView = {
         let tv = UITableView()

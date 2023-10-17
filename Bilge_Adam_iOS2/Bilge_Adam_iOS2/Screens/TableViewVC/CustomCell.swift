@@ -101,3 +101,11 @@ class CustomCell: UITableViewCell {
     }
     
 }
+
+
+struct User {
+    var image:UIImage?
+    var name:String?
+    var surname:String?
+    var birthday:Int?
+}
