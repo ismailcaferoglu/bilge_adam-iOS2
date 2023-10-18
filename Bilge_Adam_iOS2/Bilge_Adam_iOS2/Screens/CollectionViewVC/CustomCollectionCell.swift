@@ -12,7 +12,7 @@ class CustomCollectionCell: UICollectionViewCell {
     
     weak var delegate:DataTransferDelegate?
     
-    var closure:()->Void!
+    var closure:(()->Void)?
     
     private lazy var imgUser:UIImageView = {
         let iv = UIImageView()
@@ -61,7 +61,7 @@ class CustomCollectionCell: UICollectionViewCell {
     
     
     @objc func btnTapped(){
-        closure()
+        closure?()
         delegate?.getData(data: "")
     }
     
