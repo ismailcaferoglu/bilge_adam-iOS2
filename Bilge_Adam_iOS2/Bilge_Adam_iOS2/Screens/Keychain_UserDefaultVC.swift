@@ -10,6 +10,8 @@ import TinyConstraints
 
 class Keychain_UserDefaultVC: UIViewController {
     
+    var testArray:[Person]?
+    
     
     private lazy var txtUsername:BilgeAdamTextField = {
         let tf = BilgeAdamTextField()
@@ -69,11 +71,14 @@ class Keychain_UserDefaultVC: UIViewController {
     @objc func btnSaveTapped(){
         let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users"
         print("İşlem tetiklendi.")
-        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, callback: { result in
+        
+        let params = ["name":txtUsername.text ?? ""]
+        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { result in
             
             print("Sonuç VC'de alındı.")
             switch result {
             case .success(let obj):
+                self.testArray = obj
                 print(obj)
             case .failure(let err):
                 print(err.localizedDescription)

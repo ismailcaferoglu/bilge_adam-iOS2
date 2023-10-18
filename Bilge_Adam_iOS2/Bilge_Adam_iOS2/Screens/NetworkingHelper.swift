@@ -13,18 +13,18 @@ class NetworkingHelper {
     
     static let shared = NetworkingHelper()
     
-    public func getDataFromRemote(url:String,method:HTTPMethod, encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<[Person],Error>)->Void){
+    public func getDataFromRemote(url:String,method:HTTPMethod, params: Parameters,encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<[Person],Error>)->Void){
         
-        print("AF TETİKLENECEK.")
-        AF.request(url, method: method, encoding: encoding).validate().responseJSON(completionHandler: { response in
+        
+        AF.request(url, method: method, parameters: params, encoding: encoding).validate().responseJSON(completionHandler: { response in
             
-            print("AF sonuç aldı")
+           
             switch response.result {
             case .success(let object):
                 do {
                     let jsonData = try JSONSerialization.data(withJSONObject: object)
                     let decodedData = try JSONDecoder().decode([Person].self, from: jsonData)
-                    print("getData callback'i çalıştı.")
+                    
                     callback(.success(decodedData))
                 } catch {
                     callback(.failure(error))
@@ -37,7 +37,7 @@ class NetworkingHelper {
             }
         })
         
-        print("işlem bitti")
+        
     }
 }
 
