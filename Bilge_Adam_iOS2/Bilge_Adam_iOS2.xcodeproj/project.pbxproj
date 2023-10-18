@@ -32,7 +32,10 @@
 		D9C9C8682ADEA09800D5F81A /* CollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8672ADEA09800D5F81A /* CollectionViewVC.swift */; };
 		D9C9C86B2ADEA42800D5F81A /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86A2ADEA42800D5F81A /* CustomCollectionCell.swift */; };
 		D9C9C86D2ADFBE4A00D5F81A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86C2ADFBE4A00D5F81A /* KeychainHelper.swift */; };
-		D9C9C86F2ADFC32A00D5F81A /* KeychainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86E2ADFC32A00D5F81A /* KeychainVC.swift */; };
+		D9C9C86F2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */; };
+		D9C9C8722ADFD62E00D5F81A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D9C9C8712ADFD62E00D5F81A /* Alamofire */; };
+		D9C9C8742ADFD69600D5F81A /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8732ADFD69600D5F81A /* NetworkingHelper.swift */; };
+		D9C9C8762AE0046B00D5F81A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8752AE0046B00D5F81A /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +63,9 @@
 		D9C9C8672ADEA09800D5F81A /* CollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewVC.swift; sourceTree = "<group>"; };
 		D9C9C86A2ADEA42800D5F81A /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		D9C9C86C2ADFBE4A00D5F81A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
-		D9C9C86E2ADFC32A00D5F81A /* KeychainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainVC.swift; sourceTree = "<group>"; };
+		D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain_UserDefaultVC.swift; sourceTree = "<group>"; };
+		D9C9C8732ADFD69600D5F81A /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
+		D9C9C8752AE0046B00D5F81A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C9C8422AD4173000D5F81A /* SnapKit in Frameworks */,
+				D9C9C8722ADFD62E00D5F81A /* Alamofire in Frameworks */,
 				D9C9C8442AD4173000D5F81A /* SnapKit-Dynamic in Frameworks */,
 				D9C9C8472AD418A900D5F81A /* TinyConstraints in Frameworks */,
 			);
@@ -127,6 +133,7 @@
 		D9C9C8612ADE6DFA00D5F81A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D9C9C8732ADFD69600D5F81A /* NetworkingHelper.swift */,
 				D9C9C8692ADEA40700D5F81A /* CollectionViewVC */,
 				D9C9C8622ADE6E4B00D5F81A /* TableViewVC */,
 				D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */,
@@ -140,7 +147,8 @@
 				D9C9C8572ADD0DE400D5F81A /* AddPicker_SwitchVC.swift */,
 				D9C9C85B2ADD5D1A00D5F81A /* MainTabbarVC.swift */,
 				D9C9C86C2ADFBE4A00D5F81A /* KeychainHelper.swift */,
-				D9C9C86E2ADFC32A00D5F81A /* KeychainVC.swift */,
+				D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */,
+				D9C9C8752AE0046B00D5F81A /* Person.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 				D9C9C8412AD4173000D5F81A /* SnapKit */,
 				D9C9C8432AD4173000D5F81A /* SnapKit-Dynamic */,
 				D9C9C8462AD418A900D5F81A /* TinyConstraints */,
+				D9C9C8712ADFD62E00D5F81A /* Alamofire */,
 			);
 			productName = Bilge_Adam_iOS2;
 			productReference = D94143732ACBE7D500AED53A /* Bilge_Adam_iOS2.app */;
@@ -216,6 +225,7 @@
 			packageReferences = (
 				D9C9C8402AD4173000D5F81A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D9C9C8452AD418A900D5F81A /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				D9C9C8702ADFD62E00D5F81A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D94143742ACBE7D500AED53A /* Products */;
 			projectDirPath = "";
@@ -244,13 +254,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C9C8582ADD0DE400D5F81A /* AddPicker_SwitchVC.swift in Sources */,
-				D9C9C86F2ADFC32A00D5F81A /* KeychainVC.swift in Sources */,
+				D9C9C8742ADFD69600D5F81A /* NetworkingHelper.swift in Sources */,
+				D9C9C86F2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift in Sources */,
 				D9C9C85C2ADD5D1A00D5F81A /* MainTabbarVC.swift in Sources */,
 				D9C9C8492AD430DE00D5F81A /* AddTextFieldVC.swift in Sources */,
 				D9C9C86D2ADFBE4A00D5F81A /* KeychainHelper.swift in Sources */,
 				D941438D2ACC0A0C00AED53A /* LozanVC.swift in Sources */,
 				D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */,
 				D9C9C8522AD8036B00D5F81A /* AlertVC.swift in Sources */,
+				D9C9C8762AE0046B00D5F81A /* Person.swift in Sources */,
 				D9C9C8642ADE6EA400D5F81A /* CustomCell.swift in Sources */,
 				D9C9C8662ADE763B00D5F81A /* User.swift in Sources */,
 				D9C9C85E2ADE609000D5F81A /* TableViewVC.swift in Sources */,
@@ -494,6 +506,14 @@
 				minimumVersion = 4.0.2;
 			};
 		};
+		D9C9C8702ADFD62E00D5F81A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -511,6 +531,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D9C9C8452AD418A900D5F81A /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
+		};
+		D9C9C8712ADFD62E00D5F81A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9C9C8702ADFD62E00D5F81A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

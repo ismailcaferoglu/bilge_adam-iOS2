@@ -8,7 +8,7 @@
 import UIKit
 import TinyConstraints
 
-class KeychainVC: UIViewController {
+class Keychain_UserDefaultVC: UIViewController {
     
     
     private lazy var txtUsername:BilgeAdamTextField = {
@@ -67,26 +67,68 @@ class KeychainVC: UIViewController {
     }
     
     @objc func btnSaveTapped(){
-        let data = Data(txtUsername.text!.utf8)
-        KeychainHelper.shared.save(data, service: "api-key", account: "meta")
+        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users"
+        print("İşlem tetiklendi.")
+        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, callback: { result in
+            
+            print("Sonuç VC'de alındı.")
+            switch result {
+            case .success(let obj):
+                print(obj)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        })
+        
+        print("Network işlemi bitti.")
+//        saveToUserDefault(data: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsX25hbWUiOiJkb2d1Y2FuZHVyZ3VuIiwiaWQiOiI3MmZhOTJjOS1mZDc5LTRiNTgtOTkwZC1mMmViYmI2NzVmMWUiLCJyb2xlIjoiQURBTSIsImV4cCI6MTY5MzkwNjAzNH0.XiE_0eftICE-LDJ96vaGsH_RAr7205ja0Ow0tSLkHio")
+        
+        //MARK: -- Data tipine dönüştürülmüş değerleri Keychain'e service ve account bilgilerine göre yazar.
+//        let data = Data(txtUsername.text!.utf8)
+//        KeychainHelper.shared.save(data, service: "api-key", account: "meta")
     }
     
     @objc func btnReadTapped(){
+        
+        readFromUserDefault()
        
-        print(KeychainHelper.shared.getAllKeyChainItemsOfClass(kSecClassGenericPassword as String))
-        guard let data = KeychainHelper.shared.read(service: "access-token", account: "google") else {
-            print("Data bulunamadı")
-            return
-        }
+        //MARK: -- Keychain üzerindeki tüm accountlara ait bilgileri getirir.
+        //print(KeychainHelper.shared.getAllKeyChainItemsOfClass(kSecClassGenericPassword as String))
         
-        
-        let string = String(data: data, encoding: .utf8)
-        print(string)
+        //MARK: -- Keychain üzerindeki service ve account'a göre veri getirme işlemi yapar.
+//        guard let data = KeychainHelper.shared.read(service: "access-token", account: "google") else {
+//            print("Data bulunamadı")
+//            return
+//        }
+//        
+//        
+//        let string = String(data: data, encoding: .utf8)
+//        print(string)
     }
     
     @objc func btnDeleteTapped(){
-        KeychainHelper.shared.delete("api-key", account: "meta")
+        
+        deleteFromUserDefaults()
+        //MARK: -- Keychain üzerindeki service ve account'a göre silme işlemi yapar.
+        //KeychainHelper.shared.delete("api-key", account: "meta")
     }
+    
+    
+    //MARK: -- User Default ile ilgili tüm işlemler.
+    
+    private func saveToUserDefault(data:String){
+        UserDefaults.standard.setValue(data, forKey: "access-token")
+    }
+    
+    private func readFromUserDefault(){
+        let object = UserDefaults.standard.string(forKey: "access-token")
+        print(object)
+    }
+    
+    private func deleteFromUserDefaults(){
+        UserDefaults.standard.removeObject(forKey: "access-token")
+    }
+    
     
     private func setupViews(){
         self.view.backgroundColor = UIColor(named: "backgroundColor")
