@@ -64,26 +64,22 @@ class Keychain_UserDefaultVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchData()
+        
+        print(self.testArray)
         setupViews()
+        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users"
+        let params = ["name":txtUsername.text ?? ""]
+        
+        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { (result:Result<Person,Error>) in
+            
+            
+        })
        
     }
     
     @objc func btnSaveTapped(){
-        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users"
-        print("İşlem tetiklendi.")
         
-        let params = ["name":txtUsername.text ?? ""]
-        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { result in
-            
-            print("Sonuç VC'de alındı.")
-            switch result {
-            case .success(let obj):
-                self.testArray = obj
-                print(obj)
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        })
         
         print("Network işlemi bitti.")
 //        saveToUserDefault(data: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsX25hbWUiOiJkb2d1Y2FuZHVyZ3VuIiwiaWQiOiI3MmZhOTJjOS1mZDc5LTRiNTgtOTkwZC1mMmViYmI2NzVmMWUiLCJyb2xlIjoiQURBTSIsImV4cCI6MTY5MzkwNjAzNH0.XiE_0eftICE-LDJ96vaGsH_RAr7205ja0Ow0tSLkHio")
@@ -91,6 +87,25 @@ class Keychain_UserDefaultVC: UIViewController {
         //MARK: -- Data tipine dönüştürülmüş değerleri Keychain'e service ve account bilgilerine göre yazar.
 //        let data = Data(txtUsername.text!.utf8)
 //        KeychainHelper.shared.save(data, service: "api-key", account: "meta")
+    }
+    
+    func fetchData(){
+        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users/1"
+        print("İşlem tetiklendi.")
+        
+        let params = ["name":txtUsername.text ?? ""]
+        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { (result:Result<[Person],Error>) in
+            
+            print("Sonuç VC'de alındı.")
+            switch result {
+            case .success(let obj):
+                self.testArray = obj
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        })
+        
+        
     }
     
     @objc func btnReadTapped(){

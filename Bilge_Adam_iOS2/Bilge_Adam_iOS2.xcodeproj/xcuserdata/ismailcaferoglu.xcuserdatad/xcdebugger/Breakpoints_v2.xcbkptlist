@@ -39,84 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C02FCA51-CA57-4602-A9C1-B19DC3FAA7DA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "btnSaveTapped()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C02FCA51-CA57-4602-A9C1-B19DC3FAA7DA - 601e4d219643d9a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Bilge_Adam_iOS2.Person&gt;, Swift.Error&gt;) -&gt; () in Bilge_Adam_iOS2.Keychain_UserDefaultVC.btnSaveTapped() -&gt; ()"
-                  moduleName = "Bilge_Adam_iOS2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "220">
-               </Location>
-               <Location
-                  uuid = "C02FCA51-CA57-4602-A9C1-B19DC3FAA7DA - 601e4d219643d9a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Bilge_Adam_iOS2.Person&gt;, Swift.Error&gt;) -&gt; () in Bilge_Adam_iOS2.Keychain_UserDefaultVC.btnSaveTapped() -&gt; ()"
-                  moduleName = "Bilge_Adam_iOS2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "284">
-               </Location>
-               <Location
-                  uuid = "C02FCA51-CA57-4602-A9C1-B19DC3FAA7DA - ecc584e9e79caa0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bilge_Adam_iOS2.Keychain_UserDefaultVC.btnSaveTapped() -&gt; ()"
-                  moduleName = "Bilge_Adam_iOS2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "680">
-               </Location>
-               <Location
-                  uuid = "C02FCA51-CA57-4602-A9C1-B19DC3FAA7DA - 601e4d219643d9f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Bilge_Adam_iOS2.Person&gt;, Swift.Error&gt;) -&gt; () in Bilge_Adam_iOS2.Keychain_UserDefaultVC.btnSaveTapped() -&gt; ()"
-                  moduleName = "Bilge_Adam_iOS2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2AD2DBD5-3261-4E55-A3FD-D0201508AD7A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -124,28 +46,28 @@
             filePath = "Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "btnSaveTapped()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2AD2DBD5-3261-4E55-A3FD-D0201508AD7A - ecc584e9e79cb53"
+                  uuid = "2AD2DBD5-3261-4E55-A3FD-D0201508AD7A - 601e4d219643d8bf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Bilge_Adam_iOS2.Keychain_UserDefaultVC.btnSaveTapped() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Bilge_Adam_iOS2.Person&gt;, Swift.Error&gt;) -&gt; () in Bilge_Adam_iOS2.Keychain_UserDefaultVC.btnSaveTapped() -&gt; ()"
                   moduleName = "Bilge_Adam_iOS2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "540">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "672">
                </Location>
                <Location
-                  uuid = "2AD2DBD5-3261-4E55-A3FD-D0201508AD7A - ecc584e9e79cb34"
+                  uuid = "2AD2DBD5-3261-4E55-A3FD-D0201508AD7A - ecc584e9e79cbb8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -155,11 +77,155 @@
                   urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "976">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "76">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEB6623E-252D-4BA4-A958-74E36707872D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_iOS2/Screens/Generics.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "APIHelper"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E6A3964-8BA2-4144-847B-6B2C7DE2139D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E6A3964-8BA2-4144-847B-6B2C7DE2139D - 3bed04d113c22d20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_iOS2.Keychain_UserDefaultVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Bilge_Adam_iOS2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "1E6A3964-8BA2-4144-847B-6B2C7DE2139D - 3bed04d113c22d20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_iOS2.Keychain_UserDefaultVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Bilge_Adam_iOS2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85B1EE91-4592-4129-AB8F-0897B63DCFA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "809479BB-F341-4D10-9E48-5115E100E5FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "809479BB-F341-4D10-9E48-5115E100E5FF - 93433bac93e9c3ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_iOS2.Keychain_UserDefaultVC.fetchData() -&gt; ()"
+                  moduleName = "Bilge_Adam_iOS2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "809479BB-F341-4D10-9E48-5115E100E5FF - 5c7a711937a6cc83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Bilge_Adam_iOS2.Person&gt;, Swift.Error&gt;) -&gt; () in Bilge_Adam_iOS2.Keychain_UserDefaultVC.fetchData() -&gt; ()"
+                  moduleName = "Bilge_Adam_iOS2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE12EA06-217D-4EC0-97C9-51B75B90455F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_iOS2/Screens/Keychain_UserDefaultVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

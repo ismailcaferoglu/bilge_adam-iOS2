@@ -36,6 +36,7 @@
 		D9C9C8722ADFD62E00D5F81A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D9C9C8712ADFD62E00D5F81A /* Alamofire */; };
 		D9C9C8742ADFD69600D5F81A /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8732ADFD69600D5F81A /* NetworkingHelper.swift */; };
 		D9C9C8762AE0046B00D5F81A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8752AE0046B00D5F81A /* Person.swift */; };
+		D9C9C8962AE110A900D5F81A /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8952AE110A900D5F81A /* Generics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain_UserDefaultVC.swift; sourceTree = "<group>"; };
 		D9C9C8732ADFD69600D5F81A /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		D9C9C8752AE0046B00D5F81A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D9C9C8952AE110A900D5F81A /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				D9C9C86C2ADFBE4A00D5F81A /* KeychainHelper.swift */,
 				D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */,
 				D9C9C8752AE0046B00D5F81A /* Person.swift */,
+				D9C9C8952AE110A900D5F81A /* Generics.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				D941438D2ACC0A0C00AED53A /* LozanVC.swift in Sources */,
 				D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */,
 				D9C9C8522AD8036B00D5F81A /* AlertVC.swift in Sources */,
+				D9C9C8962AE110A900D5F81A /* Generics.swift in Sources */,
 				D9C9C8762AE0046B00D5F81A /* Person.swift in Sources */,
 				D9C9C8642ADE6EA400D5F81A /* CustomCell.swift in Sources */,
 				D9C9C8662ADE763B00D5F81A /* User.swift in Sources */,
