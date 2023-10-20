@@ -37,6 +37,7 @@ class NetworkingHelper {
     public func getDataFromRemoteWithoutRouter<T:Codable>(url:String,method:HTTPMethod, params: Parameters,encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<T,Error>)->Void) {
         
         
+        //MARK: -- responseJSON() ile data parse işlemi JSONSerialization aracılığıyla yapılır.
         //        AF.request(url, method: method, parameters: params, encoding: encoding).validate().responseJSON(completionHandler: { response in
         //
         //
@@ -60,7 +61,7 @@ class NetworkingHelper {
         //            }
         //        })
                 
-                
+                //MARK: -- responseDecodable(of:_) ile data parse işlemi Alamofire tarafından yapılır.
                 AF.request(url,method: method, parameters: params, encoding: encoding).validate().responseDecodable(of: T.self){ response in
         
                     switch response.result {
