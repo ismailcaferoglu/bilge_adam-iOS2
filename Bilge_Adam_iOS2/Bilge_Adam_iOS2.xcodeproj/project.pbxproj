@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D925CC2D2AE2619F00A82AF6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925CC2C2AE2619F00A82AF6 /* Router.swift */; };
 		D94143772ACBE7D500AED53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94143762ACBE7D500AED53A /* AppDelegate.swift */; };
 		D94143792ACBE7D500AED53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94143782ACBE7D500AED53A /* SceneDelegate.swift */; };
 		D941437B2ACBE7D500AED53A /* TurkiyeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D925CC2C2AE2619F00A82AF6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D94143732ACBE7D500AED53A /* Bilge_Adam_iOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_iOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94143762ACBE7D500AED53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94143782ACBE7D500AED53A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */,
 				D9C9C8752AE0046B00D5F81A /* Person.swift */,
 				D9C9C8952AE110A900D5F81A /* Generics.swift */,
+				D925CC2C2AE2619F00A82AF6 /* Router.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				D9C9C8582ADD0DE400D5F81A /* AddPicker_SwitchVC.swift in Sources */,
 				D9C9C8742ADFD69600D5F81A /* NetworkingHelper.swift in Sources */,
+				D925CC2D2AE2619F00A82AF6 /* Router.swift in Sources */,
 				D9C9C86F2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift in Sources */,
 				D9C9C85C2ADD5D1A00D5F81A /* MainTabbarVC.swift in Sources */,
 				D9C9C8492AD430DE00D5F81A /* AddTextFieldVC.swift in Sources */,

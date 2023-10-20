@@ -19,3 +19,10 @@ struct Person:Codable {
         case id
     }
 }
+
+
+struct Register:Codable {
+    var email:String
+    var password:String
+    var id:String
+}

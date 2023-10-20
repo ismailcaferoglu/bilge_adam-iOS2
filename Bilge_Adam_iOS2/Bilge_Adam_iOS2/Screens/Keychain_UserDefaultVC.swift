@@ -64,17 +64,46 @@ class Keychain_UserDefaultVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchData()
+        //fetchData()
         
         print(self.testArray)
         setupViews()
-        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users"
-        let params = ["name":txtUsername.text ?? ""]
+//        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users/1"
+//        let params = ["name":txtUsername.text ?? ""]
+//        
+//        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { (result:Result<Person,Error>) in
+//            
+//            switch result {
+//            case .success(let obj):
+//                print(obj)
+//                //self.testArray = obj
+//            case .failure(let err):
+//                print(err.localizedDescription)
+//            }
+//            
+//        })
         
-        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { (result:Result<Person,Error>) in
+        
+        let urlPost = "https://65312bc24d4c2e3f333c8a9c.mockapi.io/register"
+        let paramsPost = ["email":txtUsername.text ?? "",
+                      "password":"123123"]
+        
+        NetworkingHelper.shared.getDataFromRemote(urlRequest: .register(params: paramsPost), callback: { (result:Result<Register,Error>) in
             
-            
+            print(result)
         })
+        
+//        NetworkingHelper.shared.getDataFromRemote(url: urlPost, method: .post, params: paramsPost, callback: { (result:Result<Register,Error>) in
+//            
+//            switch result {
+//            case .success(let obj):
+//                print(obj)
+//                //self.testArray = obj
+//            case .failure(let err):
+//                print(err.localizedDescription)
+//            }
+//            
+//        })
        
     }
     
@@ -89,24 +118,24 @@ class Keychain_UserDefaultVC: UIViewController {
 //        KeychainHelper.shared.save(data, service: "api-key", account: "meta")
     }
     
-    func fetchData(){
-        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users/1"
-        print("İşlem tetiklendi.")
-        
-        let params = ["name":txtUsername.text ?? ""]
-        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { (result:Result<[Person],Error>) in
-            
-            print("Sonuç VC'de alındı.")
-            switch result {
-            case .success(let obj):
-                self.testArray = obj
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        })
-        
-        
-    }
+//    func fetchData(){
+//        let url = "https://652f7dac0b8d8ddac0b28ec7.mockapi.io/users/1"
+//        print("İşlem tetiklendi.")
+//        
+//        let params = ["name":txtUsername.text ?? ""]
+//        NetworkingHelper.shared.getDataFromRemote(url: url, method: .get, params: params, callback: { (result:Result<[Person],Error>) in
+//            
+//            print("Sonuç VC'de alındı.")
+//            switch result {
+//            case .success(let obj):
+//                self.testArray = obj
+//            case .failure(let err):
+//                print(err.localizedDescription)
+//            }
+//        })
+//        
+//        
+//    }
     
     @objc func btnReadTapped(){
         

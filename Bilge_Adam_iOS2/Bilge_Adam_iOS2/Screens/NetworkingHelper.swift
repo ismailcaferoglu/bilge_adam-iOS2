@@ -13,35 +13,71 @@ class NetworkingHelper {
     
     static let shared = NetworkingHelper()
     
-    public func getDataFromRemote<T:Codable>(url:String,method:HTTPMethod, params: Parameters,encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<T,Error>)->Void){
+    typealias Callback<T:Codable> = (Result<T,Error>)->Void
+    
+    public func getDataFromRemote<T:Codable>(urlRequest:Router, callback:@escaping Callback<T>) {
         
         
-        AF.request(url, method: method, parameters: params, encoding: encoding).validate().responseJSON(completionHandler: { response in
+        AF.request(urlRequest).validate().responseDecodable(of:T.self) { response in
             
-           
             switch response.result {
-            case .success(let object):
-                do {
-                    let jsonData = try JSONSerialization.data(withJSONObject: object)
-                    let decodedData = try JSONDecoder().decode(T.self, from: jsonData)
-                    
-                    callback(.success(decodedData))
-                } catch {
-                    callback(.failure(error))
-                }
-                
-                
-                
-            case .failure(let err):
-                callback(.failure(err))
+            case .success(let success):
+                callback(.success(success))
+            case .failure(let failure):
+
+                print(failure)
             }
-        })
+        }
         
+
         
     }
     
+    
+    public func getDataFromRemoteWithoutRouter<T:Codable>(url:String,method:HTTPMethod, params: Parameters,encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<T,Error>)->Void) {
+        
+        
+        //        AF.request(url, method: method, parameters: params, encoding: encoding).validate().responseJSON(completionHandler: { response in
+        //
+        //
+        //        }
+        //
+        //            switch response.result {
+        //            case .success(let object):
+        //                do {
+        //                    let jsonData = try JSONSerialization.data(withJSONObject: object)
+        //                    let decodedData = try JSONDecoder().decode(T.self, from: jsonData)
+        //
+        //                    callback(.success(decodedData))
+        //                } catch {
+        //                    callback(.failure(error))
+        //                }
+        //
+        //
+        //
+        //            case .failure(let err):
+        //                callback(.failure(err))
+        //            }
+        //        })
+                
+                
+                AF.request(url,method: method, parameters: params, encoding: encoding).validate().responseDecodable(of: T.self){ response in
+        
+                    switch response.result {
+                    case .success(let success):
+                        callback(.success(success))
+                    case .failure(let failure):
+        
+                        print(failure)
+                    }
+        
+                }
+                
+    }
+    
+    
     //MARK: -- NonGeneric
-    public func getDataFromRemote1(url:String,method:HTTPMethod, params: Parameters,encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<[Person],Error>)->Void){
+    public func getDataFromRemoteWithoutGeneric(url:String,method:HTTPMethod, params: Parameters,encoding:ParameterEncoding = URLEncoding.default, callback:@escaping (Result<[Person],Error>)->Void){
         
         
         AF.request(url, method: method, parameters: params, encoding: encoding).validate().responseJSON(completionHandler: { response in
