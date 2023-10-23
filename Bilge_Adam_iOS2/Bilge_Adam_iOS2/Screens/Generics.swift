@@ -54,7 +54,7 @@ protocol Prot {
     func customFunc(item:T)->T
 }
 
-class NetworkHelper<T>:Prot {
+class FetchHelper<T>:Prot {
     
     typealias Kind = T
     var test: T?

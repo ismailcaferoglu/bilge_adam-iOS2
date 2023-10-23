@@ -84,14 +84,7 @@ class Keychain_UserDefaultVC: UIViewController {
 //        })
         
         
-        let urlPost = "https://65312bc24d4c2e3f333c8a9c.mockapi.io/register"
-        let paramsPost = ["email":txtUsername.text ?? "",
-                      "password":"123123"]
         
-        NetworkingHelper.shared.getDataFromRemote(urlRequest: .register(params: paramsPost), callback: { (result:Result<Register,Error>) in
-            
-            print(result)
-        })
         
 //        NetworkingHelper.shared.getDataFromRemote(url: urlPost, method: .post, params: paramsPost, callback: { (result:Result<Register,Error>) in
 //            

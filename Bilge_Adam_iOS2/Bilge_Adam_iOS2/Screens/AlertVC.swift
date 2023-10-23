@@ -10,12 +10,14 @@ import SnapKit
 
 class AlertVC: UIViewController {
     
+    
     private lazy var btnShowAlert:UIButton = {
         let button = UIButton()
         button.setTitle("Hata Göster", for: .normal)
         button.addTarget(self, action: #selector(btnShowAlertTapped), for: .touchUpInside)
         return button
     }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

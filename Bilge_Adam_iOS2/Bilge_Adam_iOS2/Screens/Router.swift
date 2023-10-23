@@ -12,6 +12,7 @@ enum Router {
     
     case register(params:Parameters)
     case user
+    case deleteUser(userId:String)
     
     var baseURL:String {
         return "https://65312bc24d4c2e3f333c8a9c.mockapi.io"
@@ -19,10 +20,12 @@ enum Router {
     
     var path:String {
         switch self {
-        case .register,.user:
+        case .register:
             return "/register"
         case .user:
             return "/user"
+        case .deleteUser(let userId):
+            return "/user/\(userId)"
         }
     }
     
@@ -33,13 +36,15 @@ enum Router {
             return .post
         case .user:
             return .get
+        case .deleteUser:
+            return .delete
         }
     }
     
     
     var headers:HTTPHeaders {
         switch self {
-        case .register, .user:
+        case .register, .user, .deleteUser:
             return [:]
         }
     }
@@ -48,7 +53,7 @@ enum Router {
         switch self {
         case .register(let params):
             return params
-        case .user:
+        case .user, .deleteUser:
             return nil
         }
     }
