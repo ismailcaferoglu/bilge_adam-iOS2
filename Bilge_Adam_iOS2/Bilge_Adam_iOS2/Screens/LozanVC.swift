@@ -26,6 +26,8 @@ class LozanVC: UIViewController {
         self.view.backgroundColor = .green
         
         self.view.addSubview(btnBack)
+        
+        //MARK -- Bu alan git reposunda görünür.
     }
     
     @objc func btnTapped(){
