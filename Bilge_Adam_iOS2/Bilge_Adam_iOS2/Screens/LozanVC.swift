@@ -36,5 +36,11 @@ class LozanVC: UIViewController {
     }
     
 
+    
+    //MARK -- 3-Bu alan git reposunda görünür.
+    
+    //MARK -- 4-Bu alan git reposunda görünür.
+    
+    //MARK -- 5-Bu alan git reposunda görünür.
      
 }
