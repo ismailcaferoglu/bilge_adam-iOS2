@@ -100,6 +100,8 @@ class MakeNetworkRequestVC: UIViewController {
         NetworkingHelper.shared.getDataFromRemote(urlRequest: .deleteUser(userId: id), callback: { (result:Result<String,Error>) in
             print(result)
         })
+        
+
     }
     
     //MARK: -- Private Methods

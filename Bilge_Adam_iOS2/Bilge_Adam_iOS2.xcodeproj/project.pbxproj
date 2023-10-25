@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D925CC2D2AE2619F00A82AF6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925CC2C2AE2619F00A82AF6 /* Router.swift */; };
 		D925CC332AE650D600A82AF6 /* MakeNetworkRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925CC322AE650D600A82AF6 /* MakeNetworkRequestVC.swift */; };
+		D925CC382AE6621400A82AF6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D925CC372AE6621400A82AF6 /* Alamofire */; };
+		D925CC3B2AE6622000A82AF6 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = D925CC3A2AE6622000A82AF6 /* TinyConstraints */; };
+		D925CC3E2AE6623100A82AF6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D925CC3D2AE6623100A82AF6 /* SnapKit */; };
 		D94143772ACBE7D500AED53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94143762ACBE7D500AED53A /* AppDelegate.swift */; };
 		D94143792ACBE7D500AED53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94143782ACBE7D500AED53A /* SceneDelegate.swift */; };
 		D941437B2ACBE7D500AED53A /* TurkiyeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */; };
@@ -16,9 +19,6 @@
 		D94143832ACBE7D600AED53A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94143812ACBE7D600AED53A /* LaunchScreen.storyboard */; };
 		D941438B2ACC09D600AED53A /* AddLabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941438A2ACC09D600AED53A /* AddLabelVC.swift */; };
 		D941438D2ACC0A0C00AED53A /* LozanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941438C2ACC0A0C00AED53A /* LozanVC.swift */; };
-		D9C9C8422AD4173000D5F81A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9C9C8412AD4173000D5F81A /* SnapKit */; };
-		D9C9C8442AD4173000D5F81A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D9C9C8432AD4173000D5F81A /* SnapKit-Dynamic */; };
-		D9C9C8472AD418A900D5F81A /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = D9C9C8462AD418A900D5F81A /* TinyConstraints */; };
 		D9C9C8492AD430DE00D5F81A /* AddTextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8482AD430DE00D5F81A /* AddTextFieldVC.swift */; };
 		D9C9C84B2AD6736800D5F81A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C84A2AD6736800D5F81A /* Extensions.swift */; };
 		D9C9C84D2AD6790D00D5F81A /* BilgeAdamTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C84C2AD6790D00D5F81A /* BilgeAdamTextField.swift */; };
@@ -35,7 +35,6 @@
 		D9C9C86B2ADEA42800D5F81A /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86A2ADEA42800D5F81A /* CustomCollectionCell.swift */; };
 		D9C9C86D2ADFBE4A00D5F81A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86C2ADFBE4A00D5F81A /* KeychainHelper.swift */; };
 		D9C9C86F2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C86E2ADFC32A00D5F81A /* Keychain_UserDefaultVC.swift */; };
-		D9C9C8722ADFD62E00D5F81A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D9C9C8712ADFD62E00D5F81A /* Alamofire */; };
 		D9C9C8742ADFD69600D5F81A /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8732ADFD69600D5F81A /* NetworkingHelper.swift */; };
 		D9C9C8762AE0046B00D5F81A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8752AE0046B00D5F81A /* Person.swift */; };
 		D9C9C8962AE110A900D5F81A /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9C8952AE110A900D5F81A /* Generics.swift */; };
@@ -79,10 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C9C8422AD4173000D5F81A /* SnapKit in Frameworks */,
-				D9C9C8722ADFD62E00D5F81A /* Alamofire in Frameworks */,
-				D9C9C8442AD4173000D5F81A /* SnapKit-Dynamic in Frameworks */,
-				D9C9C8472AD418A900D5F81A /* TinyConstraints in Frameworks */,
+				D925CC3E2AE6623100A82AF6 /* SnapKit in Frameworks */,
+				D925CC382AE6621400A82AF6 /* Alamofire in Frameworks */,
+				D925CC3B2AE6622000A82AF6 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,10 +196,9 @@
 			);
 			name = Bilge_Adam_iOS2;
 			packageProductDependencies = (
-				D9C9C8412AD4173000D5F81A /* SnapKit */,
-				D9C9C8432AD4173000D5F81A /* SnapKit-Dynamic */,
-				D9C9C8462AD418A900D5F81A /* TinyConstraints */,
-				D9C9C8712ADFD62E00D5F81A /* Alamofire */,
+				D925CC372AE6621400A82AF6 /* Alamofire */,
+				D925CC3A2AE6622000A82AF6 /* TinyConstraints */,
+				D925CC3D2AE6623100A82AF6 /* SnapKit */,
 			);
 			productName = Bilge_Adam_iOS2;
 			productReference = D94143732ACBE7D500AED53A /* Bilge_Adam_iOS2.app */;
@@ -232,9 +229,9 @@
 			);
 			mainGroup = D941436A2ACBE7D500AED53A;
 			packageReferences = (
-				D9C9C8402AD4173000D5F81A /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D9C9C8452AD418A900D5F81A /* XCRemoteSwiftPackageReference "TinyConstraints" */,
-				D9C9C8702ADFD62E00D5F81A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D925CC362AE6621400A82AF6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D925CC392AE6622000A82AF6 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				D925CC3C2AE6623100A82AF6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = D94143742ACBE7D500AED53A /* Products */;
 			projectDirPath = "";
@@ -438,6 +435,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +463,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,23 +501,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D9C9C8402AD4173000D5F81A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.6.0;
-			};
-		};
-		D9C9C8452AD418A900D5F81A /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.2;
-			};
-		};
-		D9C9C8702ADFD62E00D5F81A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		D925CC362AE6621400A82AF6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -526,28 +509,39 @@
 				minimumVersion = 5.8.0;
 			};
 		};
+		D925CC392AE6622000A82AF6 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.2;
+			};
+		};
+		D925CC3C2AE6623100A82AF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D9C9C8412AD4173000D5F81A /* SnapKit */ = {
+		D925CC372AE6621400A82AF6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D9C9C8402AD4173000D5F81A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
+			package = D925CC362AE6621400A82AF6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
-		D9C9C8432AD4173000D5F81A /* SnapKit-Dynamic */ = {
+		D925CC3A2AE6622000A82AF6 /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D9C9C8402AD4173000D5F81A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		D9C9C8462AD418A900D5F81A /* TinyConstraints */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D9C9C8452AD418A900D5F81A /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			package = D925CC392AE6622000A82AF6 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
 		};
-		D9C9C8712ADFD62E00D5F81A /* Alamofire */ = {
+		D925CC3D2AE6623100A82AF6 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D9C9C8702ADFD62E00D5F81A /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = D925CC3C2AE6623100A82AF6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -10,7 +10,6 @@ import SnapKit
 
 class AlertVC: UIViewController {
     
-    
     private lazy var btnShowAlert:UIButton = {
         let button = UIButton()
         button.setTitle("Hata Göster", for: .normal)
