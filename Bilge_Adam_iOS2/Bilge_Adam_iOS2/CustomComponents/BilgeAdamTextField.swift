@@ -89,7 +89,7 @@ class BilgeAdamTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+    
         self.font = fontStyle.font
         
         //self.font = UIFont(name: "Avenir-Medium", size: 14)

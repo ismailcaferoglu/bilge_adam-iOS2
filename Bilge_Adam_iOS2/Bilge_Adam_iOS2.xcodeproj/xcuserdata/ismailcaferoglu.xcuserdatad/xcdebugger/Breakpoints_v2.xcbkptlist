@@ -166,54 +166,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ACF4B53B-C363-4F9C-9DC7-A814893434E5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_iOS2/Screens/Router.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "asURLRequest()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ACF4B53B-C363-4F9C-9DC7-A814893434E5 - f293e0f279073632"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bilge_Adam_iOS2.Router.asURLRequest() throws -&gt; Foundation.URLRequest"
-                  moduleName = "Bilge_Adam_iOS2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Router.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "496">
-               </Location>
-               <Location
-                  uuid = "ACF4B53B-C363-4F9C-9DC7-A814893434E5 - 2ec53ab81198d31"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; Alamofire.ParameterEncoding in Bilge_Adam_iOS2.Router.asURLRequest() throws -&gt; Foundation.URLRequest"
-                  moduleName = "Bilge_Adam_iOS2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/bilge_adam-iOS2/Bilge_Adam_iOS2/Bilge_Adam_iOS2/Screens/Router.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "311FAF35-0F15-449E-AFA2-B5EE3F8AB8E1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

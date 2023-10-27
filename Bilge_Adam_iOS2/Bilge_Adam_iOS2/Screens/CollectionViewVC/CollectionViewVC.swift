@@ -34,12 +34,14 @@ class CollectionViewVC: UIViewController {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
+    
+        let lay = makeCollectionViewLayout()
         
         //layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: lay)
+       
         cv.register(CustomCollectionCell.self, forCellWithReuseIdentifier: "cell")
-        cv.isPagingEnabled = true
+       
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -59,8 +61,8 @@ class CollectionViewVC: UIViewController {
     }
     
     private func setupLayout(){
-        collectionView.edgesToSuperview(excluding: .bottom,usingSafeArea: true)
-        collectionView.height(400)
+        collectionView.edgesToSuperview(usingSafeArea: true)
+       
     }
 }
 
@@ -90,6 +92,10 @@ extension CollectionViewVC:UICollectionViewDelegateFlowLayout {
 
 extension CollectionViewVC:UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
     }
@@ -107,6 +113,58 @@ extension CollectionViewVC:UICollectionViewDataSource {
         cell.configure(object:object)
         
         return cell
+    }
+}
+
+
+extension CollectionViewVC {
+    
+    func makeCollectionViewLayout() -> UICollectionViewLayout {
+        
+        UICollectionViewCompositionalLayout {
+            [weak self] sectionIndex, environment in
+            
+            if sectionIndex == 0 {
+                return self?.makeListLayoutSection()
+            }else {
+                return self?.makeSliderLayoutSection()
+            }
+            
+        }
+    
+        
+        //return UICollectionViewCompositionalLayout(section: layoutType.layout)
+        
+    }
+    
+    func makeSliderLayoutSection() -> NSCollectionLayoutSection {
+    
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        
+        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
+        let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [item] )
+        
+        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        layoutSection.orthogonalScrollingBehavior = .groupPagingCentered
+        
+        return layoutSection
+    }
+    
+    func makeListLayoutSection() -> NSCollectionLayoutSection {
+    
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.3))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+       
+        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [item] )
+        
+        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16)
+        layoutSection.interGroupSpacing = 16
+        
+        return layoutSection
     }
 }
 
