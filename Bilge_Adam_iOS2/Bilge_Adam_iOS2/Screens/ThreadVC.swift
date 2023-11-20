@@ -69,7 +69,11 @@ class ThreadVC: UIViewController {
     
     
     //MARK: -- Private Methods
-    
+    func getData(){
+        DispatchQueue.global(qos: .background).async {
+            // AF.request...
+        }
+    }
     
     //MARK: -- UI Methods
     func setupViews() {
