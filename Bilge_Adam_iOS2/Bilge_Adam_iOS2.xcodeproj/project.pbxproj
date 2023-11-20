@@ -12,6 +12,7 @@
 		D925CC382AE6621400A82AF6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D925CC372AE6621400A82AF6 /* Alamofire */; };
 		D925CC3B2AE6622000A82AF6 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = D925CC3A2AE6622000A82AF6 /* TinyConstraints */; };
 		D925CC3E2AE6623100A82AF6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D925CC3D2AE6623100A82AF6 /* SnapKit */; };
+		D9363B682B073BF9008B002E /* ThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9363B672B073BF9008B002E /* ThreadVC.swift */; };
 		D94143772ACBE7D500AED53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94143762ACBE7D500AED53A /* AppDelegate.swift */; };
 		D94143792ACBE7D500AED53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94143782ACBE7D500AED53A /* SceneDelegate.swift */; };
 		D941437B2ACBE7D500AED53A /* TurkiyeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		D925CC2C2AE2619F00A82AF6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D925CC322AE650D600A82AF6 /* MakeNetworkRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNetworkRequestVC.swift; sourceTree = "<group>"; };
+		D9363B672B073BF9008B002E /* ThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadVC.swift; sourceTree = "<group>"; };
 		D94143732ACBE7D500AED53A /* Bilge_Adam_iOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_iOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94143762ACBE7D500AED53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94143782ACBE7D500AED53A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				D941437A2ACBE7D500AED53A /* TurkiyeVC.swift */,
 				D941438C2ACC0A0C00AED53A /* LozanVC.swift */,
 				D9C9C8592ADD4C8F00D5F81A /* AddSegmentedVC.swift */,
+				D9363B672B073BF9008B002E /* ThreadVC.swift */,
 				D9C9C84E2AD6B62E00D5F81A /* AddButtonVC.swift */,
 				D9C9C8482AD430DE00D5F81A /* AddTextFieldVC.swift */,
 				D941438A2ACC09D600AED53A /* AddLabelVC.swift */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9363B682B073BF9008B002E /* ThreadVC.swift in Sources */,
 				D9C9C8582ADD0DE400D5F81A /* AddPicker_SwitchVC.swift in Sources */,
 				D9C9C8742ADFD69600D5F81A /* NetworkingHelper.swift in Sources */,
 				D925CC2D2AE2619F00A82AF6 /* Router.swift in Sources */,
